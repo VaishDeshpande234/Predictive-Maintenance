@@ -1,8 +1,8 @@
-# Predictive Maintenance using Machine Learning
+# Predictive Maintenance for Turbofan Engine using Machine Learning
 
 # Project Overview
 
-The goal of this project is to predict the Remaining Useful Life (RUL) of aircraft engines based on sensor data. Predictive maintenance helps identify the point at which an engine is likely to fail, allowing for timely maintenance to prevent failures and optimize maintenance schedules.
+The goal of this project is to predict the Remaining Useful Life (RUL) of Turbofan engines based on sensor data. Predictive maintenance helps identify the point at which an engine is likely to fail, allowing for timely maintenance to prevent failures and optimize maintenance schedules.
 
 # Dataset
 The dataset used in this project is the FD001 dataset from the NASA Prognostics Data Repository. It contains sensor data collected from multiple aircraft engines. Each engine has a different number of cycles of operation until failure.
