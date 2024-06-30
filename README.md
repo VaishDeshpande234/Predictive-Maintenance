@@ -70,4 +70,44 @@ Gradient Boosting: RMSE: 45.76, MAE: 34.44
 LSTM: RMSE: 47.04, MAE: 35.50
 
 # Visualisation
-The predicted RUL versus the ground truth RUL for each model are visualised.
+
+## 1. Correlation Matrix of Features
+
+### Description:
+The correlation matrix visualizes the Pearson correlation coefficients between pairs of features in the dataset. Positive values indicate a direct relationship, while negative values indicate an inverse relationship. Values close to 1 or -1 indicate strong correlations.
+
+### Key Highlights:
+
+#### Strong positive correlations between:
+- T24 and T50 (0.71)
+- T30 and T50 (0.68)
+- P30 and Ps30 (0.82)
+- Nf and Nc (0.83)
+
+#### Strong negative correlations between:
+- P30 and phi (-0.82)
+- Ps30 and phi (-0.85)
+- Nf and phi (-0.79)
+- Nc and phi (-0.79)
+
+## 2. Distribution of Time in Cycles (Train)
+
+### Description:
+This histogram shows the distribution of engine cycles in the training dataset. The x-axis represents the number of cycles, and the y-axis represents the frequency of engines operating for a given number of cycles.
+
+### Key Highlights:
+
+- Higher frequency of engines with cycle counts between 0 to around 170 cycles.
+- Gradual decline in the number of engines beyond 170 cycles, with very few engines reaching up to 350 cycles.
+- Indicates most engines tend to fail or are serviced before very high cycle counts.
+
+## 3. Predicted RUL vs. Ground Truth RUL
+
+### Description:
+This scatter plot compares the predicted Remaining Useful Life (RUL) against the ground truth RUL for three different models: Random Forest, Gradient Boosting, and LSTM. Each point represents a prediction for a specific engine cycle, with the dashed line indicating a perfect prediction (i.e., predicted RUL equals ground truth RUL).
+
+### Key Highlights:
+
+- Random Forest (blue points): Predictions cluster around the ground truth with some variance.
+- Gradient Boosting (orange points): Predictions are close to the ground truth with some spread.
+- LSTM (green points): Densely packed predictions with more variance and some outliers.
