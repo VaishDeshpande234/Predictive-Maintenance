@@ -9,8 +9,8 @@ The dataset used in this project is the FD001 dataset from the NASA Prognostics 
 
 # Dataset Files
 
-train_FD001.txt: Training dataset with sensor readings up to the failure point.
-test_FD001.txt: Test dataset with sensor readings up to a certain point, without RUL values.
+train_FD001.txt: Training dataset with sensor readings up to the failure point. 
+test_FD001.txt: Test dataset with sensor readings up to a certain point, without RUL values. 
 RUL_FD001.txt: Ground truth RUL values for the engines in the test dataset.
 
 # Features
@@ -46,17 +46,16 @@ W32
 
 # Project Structure
 
-Data Preprocessing and Exploratory Data Analysis (EDA)
-
-Data Loading: Load the training, test, and RUL datasets.
+## Data Preprocessing and Exploratory Data Analysis (EDA)
+- Data Loading: Load the training, test, and RUL datasets.
 - Data Cleaning: Drop unnecessary columns and rename columns for clarity.
 - EDA: Analyze the distributions of sensor readings, identify correlations, and visualize the data.
 
-Feature Engineering
+## Feature Engineering
 - Calculate RUL: For the training dataset, calculate the RUL based on the maximum cycle time for each unit.
 - Prepare Test Dataset: Merge the RUL values with the test dataset.
 
-Model Training and Evaluation
+## Model Training and Evaluation
 - Train/Test Split: Split the data into features and target variables.
 - Model Training: Train Random Forest, Gradient Boosting, and LSTM models.
 - Model Evaluation: Evaluate the models using RMSE and MAE metrics.
